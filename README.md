@@ -1,4 +1,4 @@
-# Mage2 Module - Magento Frontend Developer Code Challenge
+# Magento 2 Module - Magento Frontend Developer Code Challenge
 
     victorchiriac89/mfdc-challenge
 
