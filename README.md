@@ -31,7 +31,7 @@ Product added through custom product attribute as up-sell addition on bottom sec
 ## Configuration
 
  - login into your magento 2 admin panel
- - for every product there is now an attribute called `minicart_upsell` labeled "Minicart up-sell Product"
+ - for every product there is now an attribute called `minicart_upsell` labeled "Minicart up-sell Product SKU"
  - you are able to use one product sku for every product that will be added in minicart as up-sell
  - once added to the cart it will no longer be advertised in minicart
 
@@ -46,4 +46,4 @@ Product added through custom product attribute as up-sell addition on bottom sec
 
 ## Attributes
 
- - Product - Minicart up-sell Product (minicart_upsell)
+ - Product - Minicart up-sell Product SKU (minicart_upsell)

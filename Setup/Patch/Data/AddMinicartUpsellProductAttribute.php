@@ -35,7 +35,7 @@ class AddMinicartUpsellProductAttribute implements DataPatchInterface, PatchReve
             'minicart_upsell',
             [
                 'type' => 'varchar',
-                'label' => 'Minicart up-sell Product',
+                'label' => 'Minicart up-sell Product SKU',
                 'input' => 'text',
                 'source' => '',
                 'frontend' => '',

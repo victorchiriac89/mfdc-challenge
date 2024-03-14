@@ -41,7 +41,7 @@ class ProductSaveBefore implements ObserverInterface
                 $this->productRepository->get($minicartUpsell);
             } catch (NoSuchEntityException $ex) {
                 $this->messageManager->addError(__("Saving sku: %1 in attribute 'Minicart up-sell Product' but the product does not exist, we reverted that change.", $minicartUpsell));
-                $product->setData('minicart_upsell', $product->getOrigData('minicart_upsell'));
+                $product->setData('minicart_upsell', $minicartUpsellOrig);
             }
         }
     }

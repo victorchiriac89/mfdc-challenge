@@ -8,6 +8,7 @@ use Magento\Checkout\CustomerData\Cart;
 use Magento\Checkout\Model\Session\Proxy as CheckoutSession;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Framework\Pricing\Helper\Data;
 use Psr\Log\LoggerInterface;
 
 class Promotion
@@ -15,11 +16,13 @@ class Promotion
     /**
      * @param CheckoutSession $checkoutSession
      * @param Image $imageHelper
+     * @param Data $priceHelper
      * @param LoggerInterface $logger
      */
     public function __construct(
         protected CheckoutSession $checkoutSession,
         protected Image $imageHelper,
+        protected Data $priceHelper,
         protected LoggerInterface $logger
     ) {
     }
@@ -59,7 +62,8 @@ class Promotion
                     $result['promotion'][] = [
                         "name" => $upsell->getName(),
                         "image" => $this->imageHelper->init($upsell, 'product_thumbnail_image')->getUrl(),
-                        "url" => $upsell->getProductUrl()
+                        "url" => $upsell->getProductUrl(),
+                        "price" => $this->priceHelper->currency($upsell->getFinalPrice(), true, true)
                     ];
                 }
             }
