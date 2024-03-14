@@ -10,6 +10,7 @@
 
 
 ## Main Functionalities
+
 Product added through custom product attribute as up-sell addition on bottom section of minicart
 
 ## Installation
