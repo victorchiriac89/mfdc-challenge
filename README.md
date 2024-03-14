@@ -20,9 +20,12 @@ Product added through custom product attribute as up-sell addition on bottom sec
 
 ### Step 2: Enable
 
- - `php bin/magento module:enable Mfdc_Challenge`
- - `php bin/magento setup:upgrade --keep-generated`
- - `php bin/magento cache:flush`
+ - `bin/magento module:enable Mfdc_Challenge`
+ - `bin/magento setup:upgrade --keep-generated`
+ - `bin/magento setup:di:compile`
+ - `bin/magento setup:static-content:deploy -f` (-f not needed in production)
+ - `bin/magento cache:clean`
+ - `bin/magento cache:flush`
 
 ## Configuration
 
