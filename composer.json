@@ -1,0 +1,26 @@
+{
+    "name": "mfdc/challenge",
+    "description": "Product added through custom product attribute as up-sell addition on bottom section of minicart",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Magento Frontend Developer Code Challenge",
+            "email": "victorchiriac89@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.1.0",
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Mfdc\\Challenge\\": ""
+        }
+    }
+}
